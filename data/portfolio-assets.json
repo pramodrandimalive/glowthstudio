@@ -1,0 +1,172 @@
+[
+  {
+    "group": "sand-and-sky",
+    "source": "references/ai-campaings/skyandsands.png",
+    "original": "/portfolio/sand-and-sky/skincare-portrait.png",
+    "src": "/portfolio/sand-and-sky/skincare-portrait.webp",
+    "width": 1920,
+    "height": 2400,
+    "originalWidth": 2160,
+    "originalHeight": 2700
+  },
+  {
+    "group": "sand-and-sky",
+    "source": "references/ai-campaings/skyandsands-2.png",
+    "original": "/portfolio/sand-and-sky/pink-clay-product-world.png",
+    "src": "/portfolio/sand-and-sky/pink-clay-product-world.webp",
+    "width": 1800,
+    "height": 2400,
+    "originalWidth": 2727,
+    "originalHeight": 3636
+  },
+  {
+    "group": "jo-malone",
+    "source": "references/ai-campaings/jo-melone.png",
+    "original": "/portfolio/jo-malone/cologne-at-sunset.png",
+    "src": "/portfolio/jo-malone/cologne-at-sunset.webp",
+    "width": 1080,
+    "height": 1350,
+    "originalWidth": 1080,
+    "originalHeight": 1350
+  },
+  {
+    "group": "jo-malone",
+    "source": "references/ai-campaings/jo-melone-2.png",
+    "original": "/portfolio/jo-malone/cologne-beach-portrait.png",
+    "src": "/portfolio/jo-malone/cologne-beach-portrait.webp",
+    "width": 1080,
+    "height": 1350,
+    "originalWidth": 1080,
+    "originalHeight": 1350
+  },
+  {
+    "group": "gucci",
+    "source": "references/ai-campaings/gucci.png",
+    "original": "/portfolio/gucci/fashion-campaign-artwork.png",
+    "src": "/portfolio/gucci/fashion-campaign-artwork.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "gucci",
+    "source": "references/ai-campaings/gucci-2.png",
+    "original": "/portfolio/gucci/city-fashion-portrait.png",
+    "src": "/portfolio/gucci/city-fashion-portrait.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "coastal-menswear",
+    "source": "references/ai-campaings/lcy.png",
+    "original": "/portfolio/coastal-menswear/coastal-fashion-portrait.png",
+    "src": "/portfolio/coastal-menswear/coastal-fashion-portrait.webp",
+    "width": 1856,
+    "height": 2304,
+    "originalWidth": 1856,
+    "originalHeight": 2304
+  },
+  {
+    "group": "coastal-menswear",
+    "source": "references/ai-campaings/lcy-2.png",
+    "original": "/portfolio/coastal-menswear/marina-fashion-portrait.png",
+    "src": "/portfolio/coastal-menswear/marina-fashion-portrait.webp",
+    "width": 1856,
+    "height": 2304,
+    "originalWidth": 1856,
+    "originalHeight": 2304
+  },
+  {
+    "group": "spyder",
+    "source": "references/ai-campaings/spyder.png",
+    "original": "/portfolio/spyder/alpine-ski-portrait.png",
+    "src": "/portfolio/spyder/alpine-ski-portrait.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "spyder",
+    "source": "references/ai-campaings/spyder-2.png",
+    "original": "/portfolio/spyder/rainwear-campaign-artwork.png",
+    "src": "/portfolio/spyder/rainwear-campaign-artwork.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "bop",
+    "source": "references/branding/bop.png",
+    "original": "/portfolio/bop/coffee-brand-applications.png",
+    "src": "/portfolio/bop/coffee-brand-applications.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "bop",
+    "source": "references/branding/bop-2.png",
+    "original": "/portfolio/bop/coffee-packaging-and-signage.png",
+    "src": "/portfolio/bop/coffee-packaging-and-signage.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "sike",
+    "source": "references/branding/sike.png",
+    "original": "/portfolio/sike/drinks-packaging-range.png",
+    "src": "/portfolio/sike/drinks-packaging-range.webp",
+    "width": 1620,
+    "height": 2025,
+    "originalWidth": 1620,
+    "originalHeight": 2025
+  },
+  {
+    "group": "sike",
+    "source": "references/branding/sike-2.png",
+    "original": "/portfolio/sike/orange-drink-brand-artwork.png",
+    "src": "/portfolio/sike/orange-drink-brand-artwork.webp",
+    "width": 1632,
+    "height": 2037,
+    "originalWidth": 1632,
+    "originalHeight": 2037
+  },
+  {
+    "group": "cattuccino",
+    "source": "references/branding/cattuccino.png",
+    "original": "/portfolio/cattuccino/coffee-brand-identity.png",
+    "src": "/portfolio/cattuccino/coffee-brand-identity.webp",
+    "width": 2400,
+    "height": 2400,
+    "originalWidth": 3240,
+    "originalHeight": 3240
+  },
+  {
+    "group": "food-photography",
+    "source": "references/photography/food-1.jpg",
+    "original": "/portfolio/food-photography/burger-portrait.jpg",
+    "src": "/portfolio/food-photography/burger-portrait.webp",
+    "width": 1599,
+    "height": 2400,
+    "originalWidth": 3432,
+    "originalHeight": 5152
+  },
+  {
+    "group": "food-photography",
+    "source": "references/photography/food-2.jpg",
+    "original": "/portfolio/food-photography/burger-landscape.jpg",
+    "src": "/portfolio/food-photography/burger-landscape.webp",
+    "width": 2400,
+    "height": 1599,
+    "originalWidth": 5152,
+    "originalHeight": 3432
+  }
+]
