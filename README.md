@@ -55,3 +55,13 @@ All primary sections use a centred 1200 px content area, with a minimum 32 px gu
 Hero settings are separate typed entries in `data/site.ts`, with their own source, aspect ratio, fit, focal position and responsive sizes. All four selected hero sources fill 4:5 cards: Sand & Sky at 50% 45%, Jo Malone at 50% 35%, food at 50% 72%, and BOP at 50% 50%. Top cards cap at 224 px wide; bottom cards cap at 184 px. Mobile uses 102 px and 100 px cards. The BOP blue padding was CSS introduced and has been removed. Original artwork and portfolio thumbnail settings remain unchanged.
 
 Run `node scripts/check-hero.mjs` for screenshots and checks at 1280 × 800, 1440 × 900, 1920 × 1080, 2560 × 1440 and 390 × 844. Checks include rotated card containment, text clearance, shared content alignment, horizontal overflow and browser errors.
+
+## Video showcase
+
+The homepage film strip is implemented in `components/video-showcase.tsx`, with scoped CSS and typed records in `data/videos.ts`. All nine supplied YouTube Shorts use verified 1080 × 1920 portrait posters. A real Watch reel button creates just one inline privacy enhanced iframe, preserving the poster's 9:16 dimensions. Closing, selecting another reel or scrolling away destroys the previous player. No modal is used.
+
+Auto sliding advances every five seconds, looping from the end to the beginning. Hover, keyboard focus, touch/mouse interaction, playback and inactive tabs pause movement. The delay restarts after interaction. Reduced motion disables automatic movement. Native touch scrolling and scroll snapping remain available alongside mouse dragging and previous/next controls.
+
+YouTube oEmbed supplied the original titles, recorded as `sourceTitle`. Generic `Reel` categories for Sri Lanka and Aussie, Glowth AI campaigns, LCY, Ellise and Sike require confirmation. Jo Malone retains its independent AI concept disclosure. The Ayla BTS vs shots poster has white space embedded in the source; an alternative portrait cover would be welcome. Confirmation flags are stored in the data without putting editorial notes in the public interface.
+
+Run `node scripts/check-videos.mjs` against the local production preview to verify responsive layout, unchanged inline player dimensions, exclusive playback, teardown, auto sliding, pausing and reduced motion. The deterministic interaction tests stub external iframe content; actual YouTube embedding is checked separately in the browser.

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ArrowDown, ArrowUpRight, Plus } from 'lucide-react';
 import { Brand, Star } from '@/components/brand';
 import { Navigation } from '@/components/navigation';
+import { VideoShowcase } from '@/components/video-showcase';
 import { ProjectGallery } from '@/components/project-gallery';
 import { heroImages, services, site } from '@/data/site';
 
@@ -26,8 +27,9 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">The creative playground / 01</p><h2>A few things<br className="mobile-break"/> we’ve made<span className="red">.</span></h2></div><p className="handwritten work-note">Different ideas.<br/>A brighter tomorrow.<span className="scribble"/></p></div>
         <ProjectGallery />
       </section>
+      <VideoShowcase />
       <section id="services" className="services-section section-pad">
-        <div className="services-intro"><p className="eyebrow">What we do / 02</p><h2>Big ideas<span className="red">.</span><br/>Many forms<span className="red">.</span></h2><Star className="services-star"/><p className="handwritten">Same playground.<br/>Different toys.<span className="scribble"/></p></div>
+        <div className="services-intro"><p className="eyebrow">What we do / 03</p><h2>Big ideas<span className="red">.</span><br/>Many forms<span className="red">.</span></h2><Star className="services-star"/><p className="handwritten">Same playground.<br/>Different toys.<span className="scribble"/></p></div>
         <div className="services-list">{services.map((service,index)=><details key={service.title}><summary><span className="service-number">0{index+1}</span><h3>{service.title}</h3><Plus size={23} aria-hidden="true" /></summary><p>{service.description}</p></details>)}</div>
       </section>
       <section id="about" className="about-section section-pad"><p className="eyebrow">Hello, we’re Glowth.</p><p>{site.introduction}</p><span className="handwritten">Small team.<br/>Wide open imagination.</span></section>
