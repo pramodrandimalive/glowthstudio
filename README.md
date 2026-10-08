@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000/concept-1. `/` and the retired `/concept-2` route redirect here. No concept switching controls are shown.
+Open http://localhost:3000/. The homepage renders directly at `/`; the legacy `/concept-1` and `/concept-2` routes permanently redirect here. No concept switching controls are shown.
 
 ## Checks
 

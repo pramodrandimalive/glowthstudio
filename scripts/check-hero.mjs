@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 const browser=await chromium.launch({channel:'chrome'}),page=await browser.newPage();
 const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});
 for(const [w,h] of [[1280,800],[1440,900],[1920,1080],[2560,1440],[390,844]]){
- await page.setViewportSize({width:w,height:h});await page.goto('http://localhost:3000/concept-1',{waitUntil:'networkidle'});
+ await page.setViewportSize({width:w,height:h});await page.goto('http://localhost:3000/',{waitUntil:'networkidle'});
  await page.evaluate(()=>document.fonts.ready);for(const img of await page.locator('.hero img').all())await img.evaluate(el=>el.decode());
  const composition=await page.locator('.hero-composition').boundingBox();
  assert.ok(composition.width<=1360);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

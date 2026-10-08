@@ -9,7 +9,7 @@ page.on('pageerror', e => errors.push(e.message));
 page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text() + ' ' + msg.location().url); });
 for (const [name, width, height] of [['desktop-1440',1440,900],['desktop-1280',1280,720],['tablet',820,1180],['mobile',390,844]]) {
   await page.setViewportSize({width,height});
-  await page.goto('http://localhost:3000/concept-1', {waitUntil:'networkidle'});
+  await page.goto('http://localhost:3000/', {waitUntil:'networkidle'});
   await page.evaluate(() => document.fonts.ready);
   async function checkGrid(state) {
     const expected=width<=640?1:width<=1024?2:3;
@@ -85,10 +85,12 @@ for (const [name, width, height] of [['desktop-1440',1440,900],['desktop-1280',1
 }
 await page.emulateMedia({reducedMotion:'reduce'});
 assert.equal(await page.locator('html').evaluate(el=>getComputedStyle(el).scrollBehavior),'auto');
+await page.goto('http://localhost:3000/concept-1', {waitUntil:'networkidle'});
+assert.equal(page.url(), 'http://localhost:3000/');
 await page.goto('http://localhost:3000/concept-2', {waitUntil:'networkidle'});
-assert.ok(page.url().endsWith('/concept-1'));
+assert.ok(page.url() === 'http://localhost:3000/');
 await page.goto('http://localhost:3000/', {waitUntil:'networkidle'});
-assert.ok(page.url().endsWith('/concept-1'));
+assert.ok(page.url() === 'http://localhost:3000/');
 assert.deepEqual(errors,[],'Browser console errors');
 await browser.close();
 console.log('All checks passed; no browser console errors. Screenshots in test-results/.');

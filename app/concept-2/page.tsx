@@ -1,2 +1,2 @@
-import { redirect } from 'next/navigation';
-export default function RetiredConcept() { redirect('/concept-1'); }
+import { permanentRedirect } from 'next/navigation';
+export default function LegacyConcept() { permanentRedirect('/'); }
