@@ -10,20 +10,20 @@ try {
   await page.goto('http://localhost:3000/',{waitUntil:'networkidle'});
   const strip=page.locator('#video-film-strip'), cards=strip.locator('article');
   await page.locator('#films').scrollIntoViewIfNeeded();
-  await expect(cards).toHaveCount(9);await expect(page.locator('iframe')).toHaveCount(0);
+  await expect(cards).toHaveCount(9);await expect(page.locator('#video-film-strip iframe')).toHaveCount(0);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await cards.first().locator('img').evaluate(img=>img.decode());
   await page.locator('#films').screenshot({path:`test-results/inline-videos-${w}.png`});
   const before=await cards.first().boundingBox();
   await cards.first().getByRole('button').click();
-  await expect(page.locator('iframe')).toHaveCount(1);await expect(page.locator('dialog[open]')).toHaveCount(0);
+  await expect(page.locator('#video-film-strip iframe')).toHaveCount(1);await expect(page.locator('dialog[open]')).toHaveCount(0);
   assert.deepEqual(await cards.first().boundingBox(),before);
   await expect(cards.first().getByRole('button',{name:/Close video/})).toBeFocused();
   await expect(cards.first().getByRole('button',{name:/Watch reel/})).toHaveCount(0);
-  if(w>640){await cards.nth(1).getByRole('button').click();await expect(page.locator('iframe')).toHaveCount(1);await expect(cards.first().locator('iframe')).toHaveCount(0);}
-  await page.getByRole('button',{name:/Close video:/}).click();await expect(page.locator('iframe')).toHaveCount(0);
+  if(w>640){await cards.nth(1).getByRole('button').click();await expect(page.locator('#video-film-strip iframe')).toHaveCount(1);await expect(cards.first().locator('iframe')).toHaveCount(0);}
+  await page.getByRole('button',{name:/Close video:/}).click();await expect(page.locator('#video-film-strip iframe')).toHaveCount(0);
   await cards.first().getByRole('button').click();await page.getByRole('button',{name:'Next videos',exact:true}).click();
-  await expect(page.locator('iframe')).toHaveCount(0);await expect.poll(()=>strip.evaluate(el=>el.scrollLeft)).toBeGreaterThan(50);
+  await expect(page.locator('#video-film-strip iframe')).toHaveCount(0);await expect.poll(()=>strip.evaluate(el=>el.scrollLeft)).toBeGreaterThan(50);
   await strip.evaluate(el=>el.scrollTo({left:0}));await page.mouse.move(0,0);await page.locator(':focus').evaluateAll(es=>es.forEach(e=>e.blur()));
   await page.waitForTimeout(5200);assert.equal(await strip.evaluate(el=>el.scrollLeft),0,'Reduced motion disables auto advance');
   console.log(w,'layout, inline dimensions, exclusive playback, close, manual navigation and reduced motion passed');
@@ -38,6 +38,6 @@ try {
  await strip.evaluate(el=>el.scrollTo({left:el.scrollWidth,behavior:'instant'}));await page.clock.runFor(5800);await expect.poll(()=>strip.evaluate(el=>el.scrollLeft)).toBeLessThan(2);
  await strip.locator('[data-play-video="0"]').focus();await page.clock.runFor(6000);assert.equal(await strip.evaluate(el=>el.scrollLeft),0);
  await strip.locator('[data-play-video="0"]').click();await page.mouse.move(0,0);await page.clock.runFor(6000);assert.equal(await strip.evaluate(el=>el.scrollLeft),0);
- await strip.evaluate(el=>el.scrollTo({left:400,behavior:'instant'}));await expect(page.locator('iframe')).toHaveCount(0);
+ await strip.evaluate(el=>el.scrollTo({left:400,behavior:'instant'}));await expect(page.locator('#video-film-strip iframe')).toHaveCount(0);
  assert.deepEqual(errors,[]);console.log('Auto advance, hover pause/resume, end loop, keyboard focus, playback pause and scroll teardown passed');
 } finally {await browser.close();}

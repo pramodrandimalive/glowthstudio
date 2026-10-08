@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ArrowDown, ArrowUpRight, Plus } from 'lucide-react';
 import { Brand, Star } from '@/components/brand';
 import { Navigation } from '@/components/navigation';
+import { AiAdvertisingSpotlight } from '@/components/ai-advertising-spotlight';
 import { VideoShowcase } from '@/components/video-showcase';
 import { ProjectGallery } from '@/components/project-gallery';
 import { heroImages, services, site } from '@/data/site';
@@ -23,6 +24,7 @@ export default function Home() {
         </div>
       </section>
       <div className="service-strip" aria-label="Our disciplines">{['Branding','Social content','Visual campaigns','Photography','Video production'].map(s=><span key={s}>{s}<span aria-hidden="true">✦</span></span>)}</div>
+      <AiAdvertisingSpotlight />
       <section id="work" className="work-section section-pad">
         <div className="section-heading"><div><p className="eyebrow">The creative playground / 01</p><h2>A few things<br className="mobile-break"/> we’ve made<span className="red">.</span></h2></div><p className="handwritten work-note">Different ideas.<br/>A brighter tomorrow.<span className="scribble"/></p></div>
         <ProjectGallery />
